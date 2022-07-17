@@ -1,0 +1,131 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Source+Code+Pro&display=swap');
+
+/* variables */
+:root {
+  --accent: white;
+  --background-color: black;
+  --font-color: white;
+  --font-family-monospace: "Source Code Pro", monospace;
+  --font-family-sans-serif: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent: black;
+    --background-color: white;
+    --font-color: black;
+  }
+
+  .contact-icon {
+    mix-blend-mode: difference;
+  }
+}
+
+/* basic styling and layout */
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--font-family-sans-serif);
+  max-width: 768px;
+  padding: 0 2.5%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+hr {
+  background: var(--accent);
+  border-radius: 1337px;
+  border: unset;
+  height: 3px;
+  margin: 1em 0;
+  width: 100%;
+}
+
+sub {
+  color: gray;
+  font-size: 0.75rem;
+}
+
+/* header */
+h1 {
+  font-weight: normal;
+}
+
+.wave {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+/* contacts socials crypto whatever */
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.contacts>a,
+.contacts>div,
+.contacts>input {
+  align-items: center;
+  background: inherit;
+  border: 0.1em solid var(--accent);
+  border-radius: 1em;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  margin: .25em;
+  padding: .5em;
+  transition: box-shadow .2s;
+}
+
+.contacts>a:hover,
+.contacts>div:hover,
+.contacts>input:hover {
+  box-shadow: inset 0px 0px 0px 0.12em var(--accent);
+}
+
+.contact-icon {
+  height: 2em;
+  margin-right: 0.5em;
+  object-fit: contain;
+  width: 2em;
+}
+
+/* footer or whatever it is */
+.kaomoji {
+  font-size: 3em;
+  text-align: center;
+}
+
+/* crypto click thingy */
+.contacts>.crypto-input {
+  display: none;
+  flex-basis: 100%;
+  outline: 0;
+}
+
+.crypto-input:target {
+  display: block;
+}
+
+/* mobile */
+@media (max-width: 1024px) {
+  header {
+    align-items: center;
+  }
+
+  .contacts>a,
+  .contacts>div {
+    flex-grow: 1;
+  }
+}
