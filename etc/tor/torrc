@@ -1,0 +1,7 @@
+Log notice syslog
+#Log debug file /var/log/tor/debug.log
+
+DataDirectory /var/lib/tor
+
+HiddenServiceDir /var/lib/tor/nekoponmvppnutba7awvelxayxoutkolpplmmp7mxmfrobswqkbi5kad.onion/
+HiddenServicePort 80 unix:/var/run/www.sock

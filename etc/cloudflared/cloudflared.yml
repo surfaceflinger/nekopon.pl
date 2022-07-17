@@ -1,0 +1,9 @@
+credentials-file: /home/cloudflared/.cloudflared/4d0700ee-f404-4d16-9a2d-2e491f10acaa.json
+tunnel: 4d0700ee-f404-4d16-9a2d-2e491f10acaa
+
+ingress:
+ - hostname: nekopon.pl
+   service: unix://var/run/www.sock
+ - hostname: www.nekopon.pl
+   service: unix://var/run/www.sock
+ - service: http_status:404
