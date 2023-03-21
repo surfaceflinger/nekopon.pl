@@ -74,7 +74,8 @@ sub {
 }
 
 .contacts>a,
-.contacts>div {
+.contacts>div,
+.contacts>input {
   align-items: center;
   background: var(--background-color);
   border: 0.1em solid var(--accent);
@@ -88,7 +89,8 @@ sub {
 }
 
 .contacts>a:hover,
-.contacts>div:hover {
+.contacts>div:hover,
+.contacts>input:hover {
   box-shadow: inset 0px 0px 0px 0.12em var(--accent);
 }
 
@@ -113,4 +115,15 @@ sub {
   .contacts>div {
     flex-grow: 1;
   }
+}
+
+.contacts>.crypto-input {
+  display: none;
+  max-width: unset;
+  flex-basis: 100%;
+  outline: 0;
+}
+
+.crypto-input:target {
+  display: block;
 }
