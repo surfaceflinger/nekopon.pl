@@ -36,6 +36,10 @@ body {
   padding: 0 2.5%;
 }
 
+header {
+  align-items: center;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -76,7 +80,9 @@ h1 {
 .contacts>a,
 .contacts>div,
 .contacts>input {
+  flex-grow: 1;
   align-items: center;
+  justify-content: center;
   background: inherit;
   border: 0.1em solid var(--accent);
   border-radius: 1em;
@@ -116,16 +122,4 @@ h1 {
 
 .crypto-input:target {
   display: block;
-}
-
-/* mobile */
-@media (max-width: 1024px) {
-  header {
-    align-items: center;
-  }
-
-  .contacts>a,
-  .contacts>div {
-    flex-grow: 1;
-  }
 }
