@@ -1,0 +1,97 @@
+@import url("preflight.css");
+
+:root {
+	--bg: linear-gradient(180deg, #fed6af 0%, #ffe 15%) no-repeat fixed;
+	--font: 13px/1.231 arial, helvetica, clean, sans-serif;
+	--content-bg-color: #fff;
+	--content-header-bg-color: #fca;
+	--content-text-color: #000;
+	--content-url-color: #0303ee;
+	--link-bg-color: #fed;
+	--link-hover-color: #c63;
+	--text-color: #800;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #1d1f21;
+		--content-bg-color: #282a2e;
+		--content-header-bg-color: #282a2e;
+		--content-text-color: #fff;
+		--content-url-color: #c5c8c6;
+		--link-bg-color: #282a2e;
+		--link-hover-color: #5f89ac;
+		--text-color: #c5c8c6;
+	}
+}
+
+html {
+	display: flex;
+	justify-content: center;
+}
+
+body {
+	align-items: center;
+	background: var(--bg);
+	color: var(--text-color);
+	display: flex;
+	flex-direction: column;
+	font: var(--font);
+	max-width: 57.69em;
+}
+
+body > header {
+	font-size: 4em;
+	margin: 0.5em;
+}
+
+main {
+	background: var(--content-bg-color);
+	border: 1px solid;
+	margin: 0 0 0.5em 0;
+	width: 100%;
+}
+
+main > header {
+	background: var(--content-header-bg-color);
+	line-height: 2em;
+	width: 100%;
+}
+
+h2 {
+	font-size: 131%;
+	font-weight: 700;
+	margin: 0 0 0 0.5em;
+}
+
+main > section {
+	color: var(--content-text-color);
+	padding: 0.5em;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+p > a {
+	color: var(--content-url-color);
+	text-decoration: underline;
+}
+
+nav {
+	border-top: 1px solid;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+nav > a {
+	background: var(--link-bg-color);
+	margin-bottom: 1px;
+	outline: 1px var(--text-color) solid;
+	padding: 2px 1em 2px 1em;
+}
+
+nav > a:hover {
+	color: var(--link-hover-color);
+}
